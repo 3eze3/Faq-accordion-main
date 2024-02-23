@@ -1,0 +1,26 @@
+@use "../abstract/minxins" as layout;
+@use "../abstract/variables" as color_fonts;
+.card {
+  width: 100dvw;
+  min-height: 100dvh;
+  @include layout.center();
+  background-color: color_fonts.$light-pink;
+  // background: url("../assets/images/background-pattern-desktop.svg") no-repeat;
+  &__wrapper {
+    width: 88%;
+    background-color: color_fonts.$white;
+    border-radius: 0.65rem;
+    box-shadow: 0.3rem 0.3rem 0.4rem 0.09rem #00000032,
+      -0.2rem -0.2rem 0.6rem 0.07rem #19253671;
+    padding: 1.5rem;
+  }
+
+  &__header {
+    margin-bottom: 1.8rem;
+    @include layout.flex($direction: row, $gap: 1.5rem, $justify: flex-start);
+  }
+
+  &__icon {
+    width: 1.9rem;
+  }
+}

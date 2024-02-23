@@ -1,0 +1,50 @@
+@use "../abstract/minxins" as layout;
+@use "../abstract/variables" as color_fonts;
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  &__box {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background-color: #0004;
+      bottom: -0.8rem;
+    }
+  }
+
+  &__head {
+    @include layout.flex($gap: 0rem, $direction: row);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    &:hover .accordion__question {
+      color: color_fonts.$grayish-purple;
+      transition: color ease-in-out 0.2s;
+    }
+  }
+
+  &__question {
+    transition: color ease-in-out 0.2s;
+  }
+
+  &__icon {
+    width: 4.5rem;
+  }
+
+  &__description {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all ease-in 0.25s;
+    &--active {
+      height: 9.9rem;
+      padding: 0.1rem;
+      transition: ease-in 0.25s;
+    }
+  }
+}

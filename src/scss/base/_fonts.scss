@@ -1,0 +1,50 @@
+@use "../abstract/variables" as color_fonts;
+@font-face {
+  font-family: "WorkSans Regular";
+  src: url(../assets/fonts/static/WorkSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "WorkSans Bold";
+  src: url(../assets/fonts/static/WorkSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: "WorkSans SemiBold";
+  src: url(../assets/fonts/static/WorkSans-SemiBold.ttf);
+}
+
+body {
+  min-height: 100dvh;
+  font-size: 1em;
+  hyphens: manual;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2 {
+  // minixjn
+  text-shadow: 0.09rem 0.09rem 0.1rem #00000061;
+  color: color_fonts.$dark-purple;
+}
+
+h1 {
+  font-family: "WorkSans Bold";
+  font-size: color_fonts.$lg;
+}
+
+h2 {
+  font-family: "WorkSans SemiBold";
+  font-size: color_fonts.$rg;
+}
+
+p {
+  font-family: "WorkSans Regular";
+  font-size: color_fonts.$md;
+  color: color_fonts.$grayish-purple;
+  line-height: 1.5;
+  // minixjn
+  text-shadow: 0.04rem 0.01rem 0.08rem #0000009e;
+}
