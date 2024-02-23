@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "WorkSans Regular";
+  src: url(../assets/fonts/static/WorkSans-Regular.ttf);
+}
+@font-face {
+  font-family: "WorkSans Bold";
+  src: url(../assets/fonts/static/WorkSans-Bold.ttf);
+}
+@font-face {
+  font-family: "WorkSans SemiBold";
+  src: url(../assets/fonts/static/WorkSans-SemiBold.ttf);
+}
+body {
+  min-height: 100dvh;
+  font-size: 1em;
+  hyphens: manual;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2 {
+  text-shadow: 0.09rem 0.09rem 0.1rem rgba(0, 0, 0, 0.3803921569);
+  color: hsl(292deg, 42%, 14%);
+}
+
+h1 {
+  font-family: "WorkSans Bold";
+  font-size: 2.15em;
+}
+
+h2 {
+  font-family: "WorkSans SemiBold";
+  font-size: 1.2em;
+}
+
+p {
+  font-family: "WorkSans Regular";
+  font-size: 1.02em;
+  color: hsl(292deg, 16%, 49%);
+  line-height: 1.5;
+  text-shadow: 0.04rem 0.01rem 0.08rem rgba(0, 0, 0, 0.6196078431);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before,
+*::after {
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+.card {
+  width: 100dvw;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  background-color: hsl(275deg, 100%, 97%);
+}
+.card__wrapper {
+  width: 88%;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 0.65rem;
+  box-shadow: 0.3rem 0.3rem 0.4rem 0.09rem rgba(0, 0, 0, 0.1960784314), -0.2rem -0.2rem 0.6rem 0.07rem rgba(25, 37, 54, 0.4431372549);
+  padding: 1.5rem;
+}
+.card__header {
+  margin-bottom: 1.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+.card__icon {
+  width: 1.9rem;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.accordion__box {
+  position: relative;
+}
+.accordion__box::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2666666667);
+  bottom: -0.8rem;
+}
+.accordion__head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.accordion__head:hover .accordion__question {
+  color: hsl(292deg, 16%, 49%);
+  transition: color ease-in-out 0.2s;
+}
+.accordion__question {
+  transition: color ease-in-out 0.2s;
+}
+.accordion__icon {
+  width: 4.5rem;
+}
+.accordion__description {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: all ease-in 0.25s;
+}
+.accordion__description--active {
+  height: 9.9rem;
+  padding: 0.1rem;
+  transition: ease-in 0.25s;
+}
+
+/*# sourceMappingURL=style.css.map */
