@@ -15,3 +15,9 @@
   justify-content: $justify;
   gap: $gap;
 }
+
+@mixin media-break($media: min-width, $break: 970px) {
+  @media screen and ($media: $break) {
+    @content;
+  }
+}
