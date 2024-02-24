@@ -2,7 +2,7 @@
 @use "../abstract/variables" as color_fonts;
 .card {
   background: color_fonts.$light-pink
-    url("../../../dist/assets/images/background-pattern-mobile.svg") no-repeat;
+    url("../assets/images/background-pattern-mobile.svg") no-repeat;
   background-size: contain;
   width: 100dvw;
   min-height: 100dvh;
@@ -11,8 +11,7 @@
   @include layout.media-break() {
     background-size: contain;
     background: color_fonts.$light-pink
-      url("../../../dist/assets/images/background-pattern-desktop.svg")
-      no-repeat;
+      url("../assets/images/background-pattern-desktop.svg") no-repeat;
     padding: 3rem;
   }
 
