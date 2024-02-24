@@ -21,26 +21,26 @@ body {
 
 h1,
 h2 {
-  text-shadow: 0.09rem 0.09rem 0.1rem rgba(0, 0, 0, 0.3803921569);
+  text-shadow: 0.09rem 0.09rem 0.1rem rgba(0, 0, 0, 0.1450980392);
   color: hsl(292deg, 42%, 14%);
 }
 
 h1 {
   font-family: "WorkSans Bold";
-  font-size: 2.15em;
+  font-size: 2.1em;
 }
 
 h2 {
   font-family: "WorkSans SemiBold";
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 p {
   font-family: "WorkSans Regular";
-  font-size: 1.02em;
+  font-size: 1em;
   color: hsl(292deg, 16%, 49%);
   line-height: 1.5;
-  text-shadow: 0.04rem 0.01rem 0.08rem rgba(0, 0, 0, 0.6196078431);
+  text-shadow: 0.04rem 0.01rem 0.08rem rgba(0, 0, 0, 0.3019607843);
 }
 
 *,
@@ -77,18 +77,21 @@ svg {
 }
 
 .card {
+  background: hsl(275deg, 100%, 97%) url("../../../dist/assets/images/background-pattern-mobile.svg") no-repeat;
+  background-size: contain;
   width: 100dvw;
   min-height: 100dvh;
+  padding-top: 8rem;
   display: grid;
   place-items: center;
-  background-color: hsl(275deg, 100%, 97%);
 }
 .card__wrapper {
-  width: 88%;
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 0.65rem;
-  box-shadow: 0.3rem 0.3rem 0.4rem 0.09rem rgba(0, 0, 0, 0.1960784314), -0.2rem -0.2rem 0.6rem 0.07rem rgba(25, 37, 54, 0.4431372549);
-  padding: 1.5rem;
+  box-shadow: 0.2rem 0.2rem 0.4rem 0.06rem #dfd9d9 inset, -0.2rem -0.2rem 0.4rem 0.1rem rgba(0, 0, 0, 0.4431372549) inset;
+  padding: 1.3rem;
+  width: 95%;
+  min-height: 36rem;
 }
 .card__header {
   margin-bottom: 1.8rem;
@@ -110,24 +113,27 @@ svg {
   gap: 2rem;
 }
 .accordion__box {
+  width: 100%;
   position: relative;
 }
 .accordion__box::after {
   content: "";
+  background-color: rgba(0, 0, 0, 0.2666666667);
+  bottom: -0.8rem;
   position: absolute;
   height: 1px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2666666667);
-  bottom: -0.8rem;
 }
 .accordion__head {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  text-wrap: balance;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 0rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 .accordion__head:hover .accordion__question {
   color: hsl(292deg, 16%, 49%);
@@ -137,16 +143,16 @@ svg {
   transition: color ease-in-out 0.2s;
 }
 .accordion__icon {
-  width: 4.5rem;
+  flex-basis: content;
 }
 .accordion__description {
   height: 0;
   padding: 0;
   overflow: hidden;
-  transition: all ease-in 0.25s;
+  transition: ease-in 0.25s;
 }
 .accordion__description--active {
-  height: 9.9rem;
+  height: 9rem;
   padding: 0.1rem;
   transition: ease-in 0.25s;
 }
