@@ -87,7 +87,7 @@ svg {
 }
 
 .card {
-  background: hsl(275deg, 100%, 97%) url("../../../dist/assets/images/background-pattern-mobile.svg") no-repeat;
+  background: hsl(275deg, 100%, 97%) url("../assets/images/background-pattern-mobile.svg") no-repeat;
   background-size: contain;
   width: 100dvw;
   min-height: 100dvh;
@@ -98,7 +98,7 @@ svg {
 @media screen and (min-width: 970px) {
   .card {
     background-size: contain;
-    background: hsl(275deg, 100%, 97%) url("../../../dist/assets/images/background-pattern-desktop.svg") no-repeat;
+    background: hsl(275deg, 100%, 97%) url("../assets/images/background-pattern-desktop.svg") no-repeat;
     padding: 3rem;
   }
 }
