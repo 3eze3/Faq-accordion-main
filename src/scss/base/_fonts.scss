@@ -1,4 +1,5 @@
 @use "../abstract/variables" as color_fonts;
+@use "../abstract/minxins" as layout;
 @font-face {
   font-family: "WorkSans Regular";
   src: url(../assets/fonts/static/WorkSans-Regular.ttf);
@@ -32,11 +33,17 @@ h2 {
 h1 {
   font-family: "WorkSans Bold";
   font-size: color_fonts.$lg;
+  @include layout.media-break() {
+    font-size: 3.5em;
+  }
 }
 
 h2 {
   font-family: "WorkSans SemiBold";
   font-size: color_fonts.$rg;
+  @include layout.media-break() {
+    font-size: 1.12em;
+  }
 }
 
 p {
