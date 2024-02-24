@@ -25,6 +25,7 @@
       $direction: row,
       $gap: 0.5rem
     );
+
     &:hover .accordion__question {
       color: color_fonts.$grayish-purple;
       transition: color ease-in-out 0.2s;
@@ -46,6 +47,9 @@
     transition: ease-in 0.25s;
     &--active {
       height: 9rem;
+      @include layout.media-break() {
+        height: 7rem;
+      }
       padding: 0.1rem;
       transition: ease-in 0.25s;
     }

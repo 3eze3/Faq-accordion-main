@@ -6,17 +6,28 @@
   background-size: contain;
   width: 100dvw;
   min-height: 100dvh;
-  padding-top: 8rem;
+  padding-top: 5rem;
   @include layout.center();
+  @include layout.media-break() {
+    background-size: contain;
+    background: color_fonts.$light-pink
+      url("../../../dist/assets/images/background-pattern-desktop.svg")
+      no-repeat;
+    padding: 3rem;
+  }
 
   &__wrapper {
     background-color: color_fonts.$white;
     border-radius: 0.65rem;
-    box-shadow: 0.2rem 0.2rem 0.4rem 0.06rem #dfd9d9 inset,
-      -0.2rem -0.2rem 0.4rem 0.1rem #00000071 inset;
+    box-shadow: 0.2rem 0.2rem 0.5rem 0.06rem #efebeb,
+      -0.2rem -0.2rem 0.5rem 0.04rem #f7efefaf inset;
     padding: 1.3rem;
     width: 95%;
-    min-height: 36rem;
+    // min-height: 36rem;
+    @include layout.media-break() {
+      width: 47%;
+      padding: 2rem 2.7rem;
+    }
   }
 
   &__header {
@@ -26,5 +37,8 @@
 
   &__icon {
     width: 1.9rem;
+    @include layout.media-break() {
+      width: 2.5rem;
+    }
   }
 }
