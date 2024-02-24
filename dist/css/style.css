@@ -29,10 +29,20 @@ h1 {
   font-family: "WorkSans Bold";
   font-size: 2.1em;
 }
+@media screen and (min-width: 970px) {
+  h1 {
+    font-size: 3.5em;
+  }
+}
 
 h2 {
   font-family: "WorkSans SemiBold";
   font-size: 1.1em;
+}
+@media screen and (min-width: 970px) {
+  h2 {
+    font-size: 1.12em;
+  }
 }
 
 p {
@@ -81,17 +91,29 @@ svg {
   background-size: contain;
   width: 100dvw;
   min-height: 100dvh;
-  padding-top: 8rem;
+  padding-top: 5rem;
   display: grid;
   place-items: center;
+}
+@media screen and (min-width: 970px) {
+  .card {
+    background-size: contain;
+    background: hsl(275deg, 100%, 97%) url("../../../dist/assets/images/background-pattern-desktop.svg") no-repeat;
+    padding: 3rem;
+  }
 }
 .card__wrapper {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 0.65rem;
-  box-shadow: 0.2rem 0.2rem 0.4rem 0.06rem #dfd9d9 inset, -0.2rem -0.2rem 0.4rem 0.1rem rgba(0, 0, 0, 0.4431372549) inset;
+  box-shadow: 0.2rem 0.2rem 0.5rem 0.06rem #efebeb, -0.2rem -0.2rem 0.5rem 0.04rem rgba(247, 239, 239, 0.6862745098) inset;
   padding: 1.3rem;
   width: 95%;
-  min-height: 36rem;
+}
+@media screen and (min-width: 970px) {
+  .card__wrapper {
+    width: 47%;
+    padding: 2rem 2.7rem;
+  }
 }
 .card__header {
   margin-bottom: 1.8rem;
@@ -103,6 +125,11 @@ svg {
 }
 .card__icon {
   width: 1.9rem;
+}
+@media screen and (min-width: 970px) {
+  .card__icon {
+    width: 2.5rem;
+  }
 }
 
 .accordion {
@@ -155,6 +182,11 @@ svg {
   height: 9rem;
   padding: 0.1rem;
   transition: ease-in 0.25s;
+}
+@media screen and (min-width: 970px) {
+  .accordion__description--active {
+    height: 7rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
