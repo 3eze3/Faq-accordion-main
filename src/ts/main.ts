@@ -4,8 +4,8 @@ const $icons = document.querySelectorAll(
   ".accordion__icon"
 ) as NodeListOf<HTMLImageElement>;
 const $description = document.querySelectorAll(".accordion__description");
-const iconSrcActive = "../dist/assets/images/icon-minus.svg";
-const iconSrc = "../dist/assets/images/icon-plus.svg";
+const iconSrcActive = "../assets/images/icon-minus.svg";
+const iconSrc = "../assets/images/icon-plus.svg";
 $head.forEach((head, index) => {
   head.addEventListener("click", () => {
     const isActive = $description[index].classList.contains(
